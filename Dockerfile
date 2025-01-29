@@ -12,7 +12,7 @@ RUN apt-get update && \
     rm -rf /var/lib/apt/lists/*
 
 LABEL io.cartesi.rollups.sdk_version=0.9.0
-LABEL io.cartesi.rollups.ram_size=1Gi
+LABEL io.cartesi.rollups.ram_size=512Mi
 
 ARG DEBIAN_FRONTEND=noninteractive
 RUN <<EOF
@@ -21,7 +21,6 @@ apt-get update
 apt-get install -y --no-install-recommends \
   git build-essential cmake libssl-dev curl ca-certificates
 rm -rf /var/lib/apt/lists/* /var/log/* /var/cache/*
-useradd --create-home --user-group dapp
 EOF
 
 ENV PATH="/opt/cartesi/bin:${PATH}"
