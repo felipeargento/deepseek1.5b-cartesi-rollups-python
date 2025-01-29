@@ -37,7 +37,7 @@ RUN <<EOF
 set -e
 mkdir -p /models
 cd /models
-curl -OL https://huggingface.co/unsloth/DeepSeek-R1-Distill-Qwen-1.5B-GGUF/blob/main/DeepSeek-R1-Distill-Qwen-1.5B-Q2_K.gguf
+curl -OL https://huggingface.co/unsloth/DeepSeek-R1-Distill-Qwen-1.5B-GGUF/resolve/main/DeepSeek-R1-Distill-Qwen-1.5B-Q2_K.gguf
 EOF
 
 RUN <<EOF
